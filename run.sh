@@ -1,0 +1,15 @@
+torchrun --standalone --nproc_per_node=2 train_vggflow.py \
+  --config=config/aesthetic.py \
+  --seed=1 \
+  --config.model.reward_scale=1e4 \
+  --config.model.unet_reg_scale=0 \
+  --config.training.lr=1e-3 \
+  --config.sampling.low_var_subsampling=True \
+  --config.training.batch_size=1 \
+  --config.training.gradient_accumulation_steps=16 \
+  --config.sampling.batch_size=4 \
+  --config.sampling.num_batches_per_epoch=4 \
+  --config.training.num_epochs=400 \
+  --config.training.coeff_terminal=1e4 \
+  --config.model.eta_mode=linear \
+  --exp_name=exp_tmp
