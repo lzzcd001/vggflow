@@ -23,8 +23,6 @@ VGG-Flow is an efficient and robust RL finetuning method for flow matching model
 - PyTorch
 - TorchVision
 
-Then follow [https://github.com/facebookresearch/xformers](https://github.com/facebookresearch/xformers) to install xformers.
-
 With the above installed, run
 
 ```
